@@ -16,3 +16,8 @@ Currently a 2nd Year CS Student at TMU, using my skills in Web Dev and React to 
 - Link HeaderButtons to other webpages when made in the future
 - Replace "Home" button text with an Icon
 - Begin the main body section, think of Full Intro, and some Nice Graphics
+
+
+
+### FUTURE WISHLIST
+- Date/Time and Weather API in the Header element for a Utility Type feel up there!
