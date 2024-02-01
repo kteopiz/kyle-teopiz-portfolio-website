@@ -1,6 +1,15 @@
 .header-bar-container {
     display: flex; 
     align-items: center;
+    min-height: 65px;
+    background-color: white;
+    width: 100%;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .header-bar-left {
