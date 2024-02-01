@@ -19,5 +19,6 @@ Currently a 2nd Year CS Student at TMU, using my skills in Web Dev and React to 
 
 ### FUTURE WISHLIST
 
+- HIGH PRIORITY! -> Three Responsive Web Designs for Common Breakpoints (Large Desktop, Laptop, Phone)
 - Date/Time and Weather API in the Header element for a Utility Type feel up there!
 - SVG Element for Logo? Would not mind delving into that again
