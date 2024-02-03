@@ -1,8 +1,12 @@
+.incomplete {
+    display: none;
+}
+
 .header-bar-container {
     display: flex; 
     align-items: center;
-    min-height: 65px;
-    background-color: white;
+    min-height: 50px;
+    background-color: transparent;
     width: 100%;
 }
 
@@ -21,8 +25,27 @@
 
 .header-button {
     margin: 20px;
+    padding: 35px;
+    border-radius: 35px;
+    background-color: beige;
 }
 
 .header-link {
     text-decoration: none;
 }
+
+.hpb-container {
+    display: flex;
+}
+
+.hpb-text-section {
+    border: solid;
+}
+
+.hpb-image-section {
+    border: solid;
+    flex-grow: 1;
+}
+
+
+
