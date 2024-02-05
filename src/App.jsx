@@ -60,12 +60,16 @@ const HeaderButton = ({ linkToPage, pageName }) => {
 const HomePageBody = () => {
   const [traitDisplay, setTraitDisplay] = useState([null, null])
 
-  // On Mount of the website we want to select a random state for our Trait Display
+  // On Mount of the website we want to select a random state for our Trait Display, useEffect will auto fill the initial Null State of the traitDisplay
   useEffect(() => {
     handleTraitDisplay();
   }, []);
 
+
   const handleTraitDisplay = () => {
+
+    // pre-made list of objects of traits -> DEF ADD MORE, AT LEAST 10
+    // Or make like 5 and a simple animation for each of them
     let traits = [
       {
         "text" : "Lover of Coffee for the taste and slightly for the caffeine",
@@ -87,7 +91,7 @@ const HomePageBody = () => {
         "imageURL" : "src/assets/rockclimb.png"
       },
     ];
-
+    // Pick One object at random
     const randomTrait = traits[Math.floor(Math.random() * traits.length)];
     const newTraitDisplayText = randomTrait.text;
     const newTraitDisplayImageURL = randomTrait.imageURL;

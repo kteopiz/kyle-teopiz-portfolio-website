@@ -43,8 +43,10 @@
 }
 
 .hpb-image-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border: solid;
-    flex-grow: 1;
 }
 
 
