@@ -108,7 +108,7 @@ const HomePageBody = () => {
         <uL>
           <DynamicListItem text={traitDisplay[0]} />
         </uL>
-        <button>shuffle</button>
+        <button onClick={handleTraitDisplay}>shuffle</button>
       </div>
       <div className='hpb-image-section'>
         <h1>filler</h1>
