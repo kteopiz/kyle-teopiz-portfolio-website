@@ -68,14 +68,24 @@ const HomePageBody = () => {
   const handleTraitDisplay = () => {
     let traits = [
       {
-        "text" : "I am a coffee enthusiast",
-        "imageURL" : "src/assets/dog2.png"
+        "text" : "Lover of Coffee for the taste and slightly for the caffeine",
+        "imageURL" : "src/assets/coffee.png"
       },
 
       {
-        "text" : "Nerd on the Intersection of Environmental Impact and SDE",
-        "imageURL" : "src/assets/dog3.png"
-      }
+        "text" : "Programming nerd curious about the Intersection of Environmental Impact and SDE",
+        "imageURL" : "src/assets/enviro.png"
+      },
+
+      {
+        "text" : "Active investor aspiring for future financial freedom",
+        "imageURL" : "src/assets/investor.png"
+      },
+
+      {
+        "text" : "Occasional rock climber specifically bouldering",
+        "imageURL" : "src/assets/rockclimb.png"
+      },
     ];
 
     const randomTrait = traits[Math.floor(Math.random() * traits.length)];
