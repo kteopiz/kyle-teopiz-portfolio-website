@@ -111,7 +111,6 @@ const HomePageBody = () => {
         <button onClick={handleTraitDisplay}>shuffle</button>
       </div>
       <div className='hpb-image-section'>
-        <h1>filler</h1>
         <DynamicImage imageURL={traitDisplay[1]}/>
       </div>
     </section>
