@@ -38,7 +38,7 @@ export const Header = () => {
   return <>
     <div id='change-sticky' className='header-bar-container'>
       <ul className='header-bar-left'>
-        <HeaderButton linkToPage={""} pageName={"Home"} /> 
+        <a href=''><img className='header-icon' src='src/assets/kyleteopizicon.png'></img></a>
         <HeaderButton linkToPage={""} pageName={"Projects"} />
         <HeaderButton linkToPage={""} pageName={"Experience"} />
         <HeaderButton linkToPage={""} pageName={"Skills and Tools"} />
@@ -125,7 +125,7 @@ const DynamicListItem = ({ text }) => {
 
 const DynamicImage = ({ imageURL }) => {
   return <>
-      <img src={imageURL}></img>
+      <img className='trait-picture' src={imageURL}></img>
   </>
 
 }
