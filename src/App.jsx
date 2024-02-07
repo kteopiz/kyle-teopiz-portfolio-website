@@ -45,7 +45,8 @@ export const Header = () => {
         <HeaderButton linkToPage={""} pageName={"Contact Me"} />
       </ul>
       <ul className='header-bar-right'>
-        <div className='incomplete '>time and date filler</div>
+        <div className='incomplete '>
+        </div>
       </ul>
     </div>
   </>
@@ -53,7 +54,7 @@ export const Header = () => {
 
 const HeaderButton = ({ linkToPage, pageName }) => {
     return <>
-      <li className='header-button'><a className='header-link' href={linkToPage}>{pageName}</a></li>
+      <li className='header-button'><a className='header-link bolder-text' href={linkToPage}>{pageName}</a></li>
     </>
 }
 
@@ -102,8 +103,8 @@ const HomePageBody = () => {
   return <>
     <section className='hpb-container'>
       <div className='hpb-text-section'>
-        <h3>Hey there, thanks for coming</h3>
-        <h1>I'm Kyle</h1>
+        <h3 className='bolder-text' >Hey there, thanks for coming</h3>
+        <h1 className='bolder-text'>I'm Kyle</h1>
         <p>Welcome to my site that I feel embodies who I am and what I can do.</p>
         <uL>
           <DynamicListItem text={traitDisplay[0]} />

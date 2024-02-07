@@ -2,6 +2,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.bolder-text {
+    font-weight: 600;
+}
+
 .incomplete {
     display: none;
 }
@@ -25,16 +29,17 @@
     display: flex;
     margin-right: auto;
     list-style-type: none;
-    justify-content: flex-start;
+    align-items: center;
 }
 
 .header-icon {
+    margin-bottom: 20px;
+    margin-left: 10px;
     width: 90px;
     height: 90px;
 }
 
 .header-button {
-    margin: 20px;
     padding: 35px;
 }
 
@@ -50,6 +55,7 @@
 
 .hpb-text-section {
   flex-grow: 1;
+  margin-left: 20px;
 }
 
 .hpb-image-section {
