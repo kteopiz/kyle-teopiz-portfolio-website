@@ -23,7 +23,7 @@ export const Header = () => {
     */
     const header = document.getElementById('change-sticky');
     const scrollOffset = window.scrollY;
-    const headerHeight = header.offsetTop;
+    const headerHeight = 120;
 
     // If we have scrolled past the Header Height, add the sticky class to the header to fix its position to the top of the webpage
     scrollOffset > headerHeight ? setScrolled(true) : setScrolled(false);
@@ -38,7 +38,7 @@ export const Header = () => {
   return <>
     <div id='change-sticky' className='header-bar-container'>
       <ul className='header-bar-left'>
-        <a href=''><img className='header-icon' src='src/assets/kyleteopizicon.png'></img></a>
+        <a href=''><img className='header-icon' src='src/assets/KTicon.png'></img></a>
         <HeaderButton linkToPage={""} pageName={"Projects"} />
         <HeaderButton linkToPage={""} pageName={"Experience"} />
         <HeaderButton linkToPage={""} pageName={"Skills and Tools"} />
