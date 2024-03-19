@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react'
+import { IconButton } from 'rsuite';
+import RandomIcon from '@rsuite/icons/Random'
+import 'rsuite/IconButton/styles/index.css'
 import './App.css'
+
+
 
 export const App = () => {
   return <>
@@ -103,13 +108,13 @@ const HomePageBody = () => {
   return <>
     <section className='hpb-container'>
       <div className='hpb-text-section'>
-        <h3 className='bolder-text' >Hey there, thanks for coming</h3>
-        <h1 className='bolder-text'>I'm Kyle</h1>
+        <h1 className='main-header' >Hi, I'm Kyle Teopiz.</h1>
+        <h3 className='bolder-text'>Second Year CS Student | Aspiring Full Stack SWE in Mobile and Web Application Development</h3>
         <p>Welcome to my site that I feel embodies who I am and what I can do.</p>
-        <uL>
+        <ul>
           <DynamicListItem text={traitDisplay[0]} />
-        </uL>
-        <button onClick={handleTraitDisplay}>shuffle</button>
+        </ul>
+        <IconButton size='lg' appearance='default' icon={<RandomIcon />} onClick={handleTraitDisplay}>Fact Shuffle</IconButton>
       </div>
       <div className='hpb-image-section'>
         <DynamicImage imageURL={traitDisplay[1]}/>

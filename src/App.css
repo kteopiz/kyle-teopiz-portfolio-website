@@ -2,8 +2,12 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.main-header {
+    font-size: xx-large;
+}
+
 .bolder-text {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .incomplete {
