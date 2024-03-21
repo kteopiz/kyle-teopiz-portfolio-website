@@ -1,9 +1,11 @@
 * {
     font-family: 'Montserrat', sans-serif;
+
 }
 
 .main-header {
     font-size: xx-large;
+    text-align: center;
 }
 
 .bolder-text {
@@ -53,13 +55,27 @@
 
 .hpb-container {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    justify-content: space-between;
+    align-items: center;
 }
+
 
 .hpb-text-section {
   flex-grow: 1;
   margin-left: 20px;
+}
+
+.main-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.short-description {
+    list-style-type: none;
+    text-align: center;
 }
 
 .hpb-image-section {

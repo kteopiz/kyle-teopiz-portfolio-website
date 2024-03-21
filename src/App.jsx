@@ -1,8 +1,14 @@
 import { useState, useEffect } from 'react'
+import './App.css'
+
+// rsutie imports for Icons, Components, and Component Styles
+import 'rsuite/IconButton/styles/index.css'
+
+
 import { IconButton } from 'rsuite';
 import RandomIcon from '@rsuite/icons/Random'
-import 'rsuite/IconButton/styles/index.css'
-import './App.css'
+import PageTopIcon from '@rsuite/icons/PageTop';
+import PageEndIcon from '@rsuite/icons/PageEnd';
 
 
 
@@ -108,8 +114,16 @@ const HomePageBody = () => {
   return <>
     <section className='hpb-container'>
       <div className='hpb-text-section'>
-        <h1 className='main-header' >Hi, I'm Kyle Teopiz.</h1>
-        <h3 className='bolder-text'>Second Year CS Student | Aspiring Full Stack SWE in Mobile and Web Application Development</h3>
+        <div className='main-text-container'>
+        <PageTopIcon style={{fontSize: '3em'}}></PageTopIcon>
+          <h1 className='main-header' >Hi, I'm Kyle Teopiz</h1>
+          <PageEndIcon style={{fontSize: '3em'}}></PageEndIcon>
+        </div>
+        <ul className='short-description'>
+          <li>Second Year Computer Science Student at Toronto Metropolitan University</li>
+          <li>Incoming Web Developer Associate Intern at Civiconnect</li>
+          <li>Aspiring Full Stack SWE in Web and Mobile Applications</li>
+        </ul>
         <p>Welcome to my site that I feel embodies who I am and what I can do.</p>
         <ul>
           <DynamicListItem text={traitDisplay[0]} />
