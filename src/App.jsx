@@ -2,21 +2,64 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 // rsutie imports for Icons, Components, and Component Styles
-import 'rsuite/IconButton/styles/index.css'
-
-
-import { IconButton } from 'rsuite';
-import RandomIcon from '@rsuite/icons/Random'
 import PageTopIcon from '@rsuite/icons/PageTop';
 import PageEndIcon from '@rsuite/icons/PageEnd';
 
+const thirdsInformation = [
 
+  {
+    "bg-color" : "blue",
+    "title" : "Projects & Skills",
+    "description" : "See my technichal skils from 4 years of Computer Science education and passion projects."
+  },
+
+  {
+    "bg-color" : "red",
+    "title" : "About Me",
+    "description" : "See what I love to do outside of the realm of Computer Science. I'm a hard worker and an adventurer and I'd love to show you where it's taken me."
+  },
+
+  {
+    "bg-color" : "yellow",
+    "title" : "Experience",
+    "description" : "See where I've honed my soft and technichal skills through my diverse professional career, something I'm eager to grow and gain experience from various sources."
+  }
+
+];
 
 export const App = () => {
+  const [thirds, setThirds] = useState([null, null, null]);
+
+  useEffect(() => {
+    handleThirds();
+  }, []);
+
+  const handleThirds = () => {
+    let informedThirds = [<HomePageThird />, <HomePageThird />, <HomePageThird />];
+    for (let third = 0; third < informedThirds.length; third++) {
+      const currentInformation = thirdsInformation[third];
+      informedThirds[third] = <HomePageThird background={currentInformation['bg-color']} categoryName={currentInformation['title']} shortDescription={currentInformation['description']} />;
+    }
+    setThirds(informedThirds);
+  }
+
+  /*
   return <>
     <Header />
     <HomePageBody />
   </>
+  */
+
+  return <>
+    <div className='thirds-container'>
+      {thirds[0]}
+      {thirds[1]}
+      {thirds[2]}
+    </div>
+  </>
+
+
+
   }
 
 // Header Component to be re-used on multiple webpages in the future
@@ -125,28 +168,20 @@ const HomePageBody = () => {
           <li>Aspiring Full Stack SWE in Web and Mobile Applications</li>
         </ul>
         <p>Welcome to my site that I feel embodies who I am and what I can do.</p>
-        <ul>
-          <DynamicListItem text={traitDisplay[0]} />
-        </ul>
-        <IconButton size='lg' appearance='default' icon={<RandomIcon />} onClick={handleTraitDisplay}>Fact Shuffle</IconButton>
-      </div>
-      <div className='hpb-image-section'>
-        <DynamicImage imageURL={traitDisplay[1]}/>
       </div>
     </section>
   </>
 }
 
-const DynamicListItem = ({ text }) => {
-  return <>
-    <li>{text}</li>
-  </>
-}
+const HomePageThird = ( { background, categoryName, shortDescription} ) => {
 
-const DynamicImage = ({ imageURL }) => {
   return <>
-      <img className='trait-picture' src={imageURL}></img>
+    <section className='third-info-section' style={{backgroundColor: background}}>
+      <h3>{categoryName}</h3>
+      <p>{shortDescription}</p>
+    </section>
   </>
+
 
 }
 

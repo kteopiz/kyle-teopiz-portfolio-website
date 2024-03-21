@@ -90,4 +90,17 @@
 }
 
 
+.thirds-container {
+    display: flex;
+}
+
+.third-info-section {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 100vh;
+    flex-grow: 1;
+    border: teal solid;
+}
+
 

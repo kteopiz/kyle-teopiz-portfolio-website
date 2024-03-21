@@ -5,13 +5,16 @@ CSS Style for GENERAL STYLING:
 
 */
 
-body {
+html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
     display: flex;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
 }
 
 ul {
