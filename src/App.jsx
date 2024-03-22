@@ -8,19 +8,19 @@ import PageEndIcon from '@rsuite/icons/PageEnd';
 const thirdsInformation = [
 
   {
-    "bg-color" : "blue",
+    "bg-color" : "#1e1e34",
     "title" : "Projects & Skills",
     "description" : "See my technichal skils from 4 years of Computer Science education and passion projects."
   },
 
   {
-    "bg-color" : "red",
+    "bg-color" : "#313349",
     "title" : "About Me",
     "description" : "See what I love to do outside of the realm of Computer Science. I'm a hard worker and an adventurer and I'd love to show you where it's taken me."
   },
 
   {
-    "bg-color" : "yellow",
+    "bg-color" : "#4a4e69",
     "title" : "Experience",
     "description" : "See where I've honed my soft and technichal skills through my diverse professional career, something I'm eager to grow and gain experience from various sources."
   }
@@ -51,6 +51,10 @@ export const App = () => {
   */
 
   return <>
+    <h1 className='homepage-heading' >Hello, I'm Kyle Teopiz</h1>
+    <div className='contact-bar'>
+
+    </div>
     <div className='thirds-container'>
       {thirds[0]}
       {thirds[1]}
@@ -174,15 +178,14 @@ const HomePageBody = () => {
 }
 
 const HomePageThird = ( { background, categoryName, shortDescription} ) => {
-
   return <>
-    <section className='third-info-section' style={{backgroundColor: background}}>
-      <h3>{categoryName}</h3>
-      <p>{shortDescription}</p>
+    <section className='third-info-container' style={{backgroundColor: background}}>
+      <div className='third-inner-text-container'>
+        <h3>{categoryName}</h3>
+        <p>{shortDescription}</p>
+      </div>
     </section>
   </>
-
-
 }
 
 export default App

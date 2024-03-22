@@ -1,6 +1,12 @@
+/* 
+Current Colour Palette
+
+
+
+*/
+
 * {
     font-family: 'Montserrat', sans-serif;
-
 }
 
 .main-header {
@@ -89,18 +95,39 @@
     margin-right: 100px;
 }
 
+.homepage-heading {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15%;
+
+    font-size: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    color: #1e1e34;
+    background-color: #E7E9EF;
+    padding: 27px;
+    border-radius: 60px;
+}
 
 .thirds-container {
     display: flex;
 }
 
-.third-info-section {
+.third-info-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 33%;
     height: 100vh;
     flex-grow: 1;
-    border: teal solid;
+    z-index: -10;
+    padding: 15px;
+}
+.third-inner-text-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 33%;
 }
 
 
