@@ -4,7 +4,6 @@ CSS Style for GENERAL STYLING:
     Used for element selectors, and items outside of React Components
 
 */
-
 html, body {
     box-sizing: border-box;
     margin: 0;
