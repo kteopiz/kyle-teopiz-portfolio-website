@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
-// rsutie imports for Icons, Components, and Component Styles
+// rsuite and React Icons imports for Icons, Components, and Component Styles
 import PageTopIcon from '@rsuite/icons/PageTop';
 import PageEndIcon from '@rsuite/icons/PageEnd';
+import { FaLinkedin } from "react-icons/fa";
 
 const thirdsInformation = [
 
@@ -43,18 +44,8 @@ export const App = () => {
     setThirds(informedThirds);
   }
 
-  /*
-  return <>
-    <Header />
-    <HomePageBody />
-  </>
-  */
-
   return <>
     <h1 className='homepage-heading' >Hello, I'm Kyle Teopiz</h1>
-    <div className='contact-bar'>
-
-    </div>
     <div className='thirds-container'>
       {thirds[0]}
       {thirds[1]}
@@ -185,6 +176,23 @@ const HomePageThird = ( { background, categoryName, shortDescription} ) => {
         <p>{shortDescription}</p>
       </div>
     </section>
+  </>
+}
+
+const ToolBarElement = () => {
+  return <>
+  <li><a><Icon></Icon></a></li>
+  </>
+}
+
+const ToolBar = () => {
+
+  return <>
+  <ul className='contact-bar'>
+    <ToolBarElement />
+    <ToolBarElement />
+    <ToolBarElement />
+  </ul>
   </>
 }
 

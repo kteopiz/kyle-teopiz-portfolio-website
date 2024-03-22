@@ -111,6 +111,12 @@ Current Colour Palette
     border-radius: 60px;
 }
 
+.contact-bar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);   
+}
+
 .thirds-container {
     display: flex;
 }
