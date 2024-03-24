@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 // rsuite and React Icons imports for Icons, Components, and Component Styles
+import { Icon } from '@rsuite/icons';
 import PageTopIcon from '@rsuite/icons/PageTop';
 import PageEndIcon from '@rsuite/icons/PageEnd';
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaMailBulk } from "react-icons/fa";
 
 const thirdsInformation = [
-
   {
     "bg-color" : "#1e1e34",
     "title" : "Projects & Skills",
@@ -25,7 +25,23 @@ const thirdsInformation = [
     "title" : "Experience",
     "description" : "See where I've honed my soft and technichal skills through my diverse professional career, something I'm eager to grow and gain experience from various sources."
   }
+];
 
+const iconLinkInformation = [
+  {
+    "faImport": FaLinkedin,
+    "externalURL": "https://www.linkedin.com/in/kyleteopiz/"
+  },
+
+  {
+    "faImport": FaGithub,
+    "externalURL": "https://github.com/kteopiz"
+  },
+
+  {
+    "faImport": FaMailBulk,
+    "externalURL": "" // Purposefully empty, no link to emails, different feature.
+  }
 ];
 
 export const App = () => {
@@ -46,14 +62,13 @@ export const App = () => {
 
   return <>
     <h1 className='homepage-heading' >Hello, I'm Kyle Teopiz</h1>
+    <ToolBar />
     <div className='thirds-container'>
       {thirds[0]}
       {thirds[1]}
       {thirds[2]}
     </div>
   </>
-
-
 
   }
 
@@ -179,19 +194,31 @@ const HomePageThird = ( { background, categoryName, shortDescription} ) => {
   </>
 }
 
-const ToolBarElement = () => {
+const ToolBarElement = ( { iconName, socialMediaLink } ) => {
   return <>
-  <li><a><Icon></Icon></a></li>
+  <li><a href={socialMediaLink}><Icon as={iconName} size="2em" className='contact-bar-element'></Icon></a></li>
   </>
 }
 
 const ToolBar = () => {
+  const [iconLinks, setIconLinks] = useState([null, null, null]);
+
+  useEffect(() => {handleIconLinks();}, [])
+  
+  const handleIconLinks = () => {
+    let tempIcons = [<ToolBarElement />, <ToolBarElement />, <ToolBarElement />];
+    for (let iconLink = 0; iconLink < iconLinks.length; iconLink++) {
+      const currentIconLink = iconLinkInformation[iconLink];
+      tempIcons[iconLink] = <ToolBarElement iconName={currentIconLink.faImport} socialMediaLink={currentIconLink.externalURL} />;
+    }
+    setIconLinks(tempIcons);
+  }
 
   return <>
   <ul className='contact-bar'>
-    <ToolBarElement />
-    <ToolBarElement />
-    <ToolBarElement />
+    {iconLinks[0]}
+    {iconLinks[1]}
+    {iconLinks[2]}
   </ul>
   </>
 }

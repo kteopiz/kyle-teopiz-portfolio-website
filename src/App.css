@@ -115,6 +115,16 @@ Current Colour Palette
     position: absolute;
     left: 50%;
     transform: translateX(-50%);   
+    top: 43%;
+
+    display: flex;
+    gap: 20px;
+
+    list-style-type: none;
+}
+
+.contact-bar-element {
+    color: #E7E9EF;
 }
 
 .thirds-container {
