@@ -127,6 +127,14 @@ Current Colour Palette
     color: #E7E9EF;
 }
 
+.contact-bar-element:hover {
+    color: #FDB849 ;   
+}
+
+.email-element:hover {
+    
+}
+
 .thirds-container {
     display: flex;
 }

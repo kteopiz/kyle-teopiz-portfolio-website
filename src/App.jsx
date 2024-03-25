@@ -40,7 +40,7 @@ const iconLinkInformation = [
 
   {
     "faImport": FaMailBulk,
-    "externalURL": "" // Purposefully empty, no link to emails, different feature.
+    "externalURL": "", // Purposefully empty, no link to emails, different feature.
   }
 ];
 
@@ -194,9 +194,9 @@ const HomePageThird = ( { background, categoryName, shortDescription} ) => {
   </>
 }
 
-const ToolBarElement = ( { iconName, socialMediaLink } ) => {
+const ToolBarElement = ( { iconName, socialMediaLink, uniqueProps } ) => {
   return <>
-  <li><a href={socialMediaLink}><Icon as={iconName} size="2em" className='contact-bar-element'></Icon></a></li>
+  <li><a href={socialMediaLink}><Icon as={iconName} size="2em" className={'contact-bar-element ' + uniqueProps}></Icon></a></li>
   </>
 }
 
@@ -209,7 +209,7 @@ const ToolBar = () => {
     let tempIcons = [<ToolBarElement />, <ToolBarElement />, <ToolBarElement />];
     for (let iconLink = 0; iconLink < iconLinks.length; iconLink++) {
       const currentIconLink = iconLinkInformation[iconLink];
-      tempIcons[iconLink] = <ToolBarElement iconName={currentIconLink.faImport} socialMediaLink={currentIconLink.externalURL} />;
+      tempIcons[iconLink] = <ToolBarElement iconName={currentIconLink.faImport} socialMediaLink={currentIconLink.externalURL} specialClass={currentIconLink.specialClass}/>;
     }
     setIconLinks(tempIcons);
   }
