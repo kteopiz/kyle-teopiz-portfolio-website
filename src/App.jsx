@@ -40,7 +40,7 @@ const iconLinkInformation = [
 
   {
     "faImport": FaMailBulk,
-    "externalURL": "", // Purposefully empty, no link to emails, different feature.
+    "externalURL": "mailto:kylecteopiz@gmail.com?subject=Let's Connect!"
   }
 ];
 
